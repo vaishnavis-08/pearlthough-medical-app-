@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item active">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="records-container">
+                <!-- Header -->
+                <header class="page-header-alt">
+                    <div class="header-left-alt">
+                        <div class="page-title-group">
+                            <h1>Medical Records</h1>
+                            <p>Your latest test results, vitals, and documents</p>
+                        </div>
+                    </div>
+                    <div class="header-right-alt">
+                        <button class="btn-apt-action btn-outline-resch"
+                            style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i data-lucide="pill" style="width: 18px;"></i>
+                            Prescriptions
+                        </button>
+                    </div>
+                </header>
+
+                <div class="records-grid">
+                    <div class="left-col">
+                        <section class="records-section">
+                            <h2>Recent Vitals</h2>
+                            <div class="vitals-row">
+                                <div class="vital-card">
+                                    <i data-lucide="activity" class="vital-icon-float"></i>
+                                    <div class="vital-title">Blood Pressure</div>
+                                    <div class="vital-value">122/80 <small
+                                            style="font-size: 0.8rem; font-weight: 600;">mmHg</small></div>
+                                </div>
+                                <div class="vital-card">
+                                    <i data-lucide="heart" class="vital-icon-float"></i>
+                                    <div class="vital-title">Heart Rate</div>
+                                    <div class="vital-value">74 <small
+                                            style="font-size: 0.8rem; font-weight: 600;">bpm</small></div>
+                                </div>
+                                <div class="vital-card">
+                                    <i data-lucide="droplet" class="vital-icon-float"></i>
+                                    <div class="vital-title">Blood Sugar</div>
+                                    <div class="vital-value">105 <small
+                                            style="font-size: 0.8rem; font-weight: 600;">mg/dL</small></div>
+                                </div>
+                                <div class="vital-card">
+                                    <i data-lucide="timer" class="vital-icon-float"></i>
+                                    <div class="vital-title">SpO₂</div>
+                                    <div class="vital-value">98 <small
+                                            style="font-size: 0.8rem; font-weight: 600;">%</small></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="records-section">
+                            <h2>Lab Reports</h2>
+                            <div class="lab-reports-list">
+                                <div class="report-card">
+                                    <div class="report-card-header">
+                                        <div class="report-card-title">
+                                            <h3>Complete Blood Count (CBC)</h3>
+                                            <span class="report-card-date">2025-07-28 • Metropolis Lab</span>
+                                        </div>
+                                        <span class="badge-status badge-normal">Normal</span>
+                                    </div>
+                                    <div class="report-metrics-grid">
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Haemoglobin</span>
+                                            <span class="metric-val-s">14.2</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">WBC Count</span>
+                                            <span class="metric-val-s">7,200</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">RBC Count</span>
+                                            <span class="metric-val-s">5.1</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Platelets</span>
+                                            <span class="metric-val-s">2,40,000</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-view-full">
+                                        <i data-lucide="search" style="width: 16px;"></i>
+                                        View Full Report
+                                    </button>
+                                </div>
+
+                                <div class="report-card">
+                                    <div class="report-card-header">
+                                        <div class="report-card-title">
+                                            <h3>Lipid Profile</h3>
+                                            <span class="report-card-date">2025-07-15 • SRL Diagnostics</span>
+                                        </div>
+                                        <span class="badge-status badge-review">Review</span>
+                                    </div>
+                                    <div class="report-metrics-grid">
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Total Cholesterol</span>
+                                            <span class="metric-val-s">218</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">LDL Cholesterol</span>
+                                            <span class="metric-val-s">138</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">HDL Cholesterol</span>
+                                            <span class="metric-val-s">48</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Triglycerides</span>
+                                            <span class="metric-val-s">168</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-view-full">
+                                        <i data-lucide="search" style="width: 16px;"></i>
+                                        View Full Report
+                                    </button>
+                                </div>
+
+                                <div class="report-card">
+                                    <div class="report-card-header">
+                                        <div class="report-card-title">
+                                            <h3>HbA1c (Glycated Haemoglobin)</h3>
+                                            <span class="report-card-date">2025-06-20 • Dr. Lal PathLabs</span>
+                                        </div>
+                                        <span class="badge-status badge-normal">Normal</span>
+                                    </div>
+                                    <div class="report-metrics-grid">
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">HbA1c</span>
+                                            <span class="metric-val-s">5.6</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Est. Avg Glucose</span>
+                                            <span class="metric-val-s">114</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Fasting Glucose</span>
+                                            <span class="metric-val-s">92</span>
+                                        </div>
+                                        <div class="metric-box">
+                                            <span class="metric-label-s">Post-Prandial</span>
+                                            <span class="metric-val-s">128</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-view-full">
+                                        <i data-lucide="search" style="width: 16px;"></i>
+                                        View Full Report
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="right-col">
+                        <section class="records-section">
+                            <h2>Medical Documents</h2>
+                            <div class="docs-list">
+                                <div class="doc-item">
+                                    <div class="doc-info-group">
+                                        <div class="doc-icon-v">
+                                            <i data-lucide="file-text"></i>
+                                        </div>
+                                        <div class="doc-text-group">
+                                            <h4>Discharge Summary</h4>
+                                            <p>2025-05-12 • 2 Pages</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="download" class="btn-doc-download"></i>
+                                </div>
+                                <div class="doc-item">
+                                    <div class="doc-info-group">
+                                        <div class="doc-icon-v">
+                                            <i data-lucide="shield"></i>
+                                        </div>
+                                        <div class="doc-text-group">
+                                            <h4>Insurance Card</h4>
+                                            <p>2025-01-01 • 1 Page</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="download" class="btn-doc-download"></i>
+                                </div>
+                                <div class="doc-item">
+                                    <div class="doc-info-group">
+                                        <div class="doc-icon-v">
+                                            <i data-lucide="needle"></i>
+                                        </div>
+                                        <div class="doc-text-group">
+                                            <h4>Vaccination Cert</h4>
+                                            <p>2022-08-18 • 1 Page</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="download" class="btn-doc-download"></i>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Report Detail Modal -->
+    <div class="report-modal-overlay" id="reportModal">
+        <div class="report-modal">
+            <div class="report-modal-header">
+                <h2 id="modalReportTitle">Report Title</h2>
+                <button class="report-modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="report-modal-meta" id="modalMeta"></div>
+            <table class="report-modal-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Result</th>
+                        <th>Reference Range</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="modalTableBody"></tbody>
+            </table>
+            <div class="report-modal-footer">
+                <button class="btn-modal-close" id="modalCloseBtn">Close</button>
+                <button class="btn-modal-download">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Full report data for each report card
+            const reportData = [
+                {
+                    title: 'Complete Blood Count (CBC)',
+                    date: '2025-07-28',
+                    lab: 'Metropolis Lab',
+                    status: 'Normal',
+                    rows: [
+                        { param: 'Haemoglobin', result: '14.2 g/dL', range: '13.0 - 17.0', cls: 'val-normal' },
+                        { param: 'WBC Count', result: '7,200 /µL', range: '4,000 - 11,000', cls: 'val-normal' },
+                        { param: 'RBC Count', result: '5.1 M/µL', range: '4.5 - 5.5', cls: 'val-normal' },
+                        { param: 'Platelets', result: '2,40,000 /µL', range: '1,50,000 - 4,00,000', cls: 'val-normal' },
+                        { param: 'Hematocrit (PCV)', result: '42.5 %', range: '38.0 - 50.0', cls: 'val-normal' },
+                        { param: 'MCV', result: '88 fL', range: '80 - 100', cls: 'val-normal' },
+                        { param: 'MCH', result: '28 pg', range: '27 - 33', cls: 'val-normal' },
+                        { param: 'MCHC', result: '33.4 g/dL', range: '32 - 36', cls: 'val-normal' },
+                        { param: 'Neutrophils', result: '60 %', range: '40 - 70', cls: 'val-normal' },
+                        { param: 'Lymphocytes', result: '30 %', range: '20 - 40', cls: 'val-normal' },
+                    ]
+                },
+                {
+                    title: 'Lipid Profile',
+                    date: '2025-07-15',
+                    lab: 'SRL Diagnostics',
+                    status: 'Review',
+                    rows: [
+                        { param: 'Total Cholesterol', result: '218 mg/dL', range: '< 200', cls: 'val-borderline' },
+                        { param: 'LDL Cholesterol', result: '138 mg/dL', range: '< 100', cls: 'val-high' },
+                        { param: 'HDL Cholesterol', result: '48 mg/dL', range: '> 40', cls: 'val-normal' },
+                        { param: 'Triglycerides', result: '168 mg/dL', range: '< 150', cls: 'val-borderline' },
+                        { param: 'VLDL Cholesterol', result: '33.6 mg/dL', range: '5 - 40', cls: 'val-normal' },
+                        { param: 'Total/HDL Ratio', result: '4.5', range: '< 5.0', cls: 'val-borderline' },
+                        { param: 'LDL/HDL Ratio', result: '2.9', range: '< 3.5', cls: 'val-normal' },
+                    ]
+                },
+                {
+                    title: 'HbA1c (Glycated Haemoglobin)',
+                    date: '2025-06-20',
+                    lab: 'Dr. Lal PathLabs',
+                    status: 'Normal',
+                    rows: [
+                        { param: 'HbA1c', result: '5.6 %', range: '4.0 - 5.7', cls: 'val-normal' },
+                        { param: 'Est. Avg Glucose', result: '114 mg/dL', range: '< 126', cls: 'val-normal' },
+                        { param: 'Fasting Glucose', result: '92 mg/dL', range: '70 - 100', cls: 'val-normal' },
+                        { param: 'Post-Prandial', result: '128 mg/dL', range: '< 140', cls: 'val-normal' },
+                        { param: 'Fasting Insulin', result: '8.2 µIU/mL', range: '2.6 - 24.9', cls: 'val-normal' },
+                        { param: 'HOMA-IR', result: '1.86', range: '< 2.5', cls: 'val-normal' },
+                    ]
+                }
+            ];
+
+            const modal = document.getElementById('reportModal');
+            const modalTitle = document.getElementById('modalReportTitle');
+            const modalMeta = document.getElementById('modalMeta');
+            const modalBody = document.getElementById('modalTableBody');
+            const closeBtn = document.getElementById('modalClose');
+            const closeBtnFooter = document.getElementById('modalCloseBtn');
+
+            const openModal = (index) => {
+                const data = reportData[index];
+                modalTitle.textContent = data.title;
+                modalMeta.innerHTML = `<span>📅 ${data.date}</span><span>🏥 ${data.lab}</span><span>${data.status === 'Normal' ? '✅' : '⚠️'} ${data.status}</span>`;
+                modalBody.innerHTML = data.rows.map(r => `
+                    <tr>
+                        <td>${r.param}</td>
+                        <td><strong>${r.result}</strong></td>
+                        <td>${r.range}</td>
+                        <td><span class="${r.cls}">${r.cls.replace('val-', '').charAt(0).toUpperCase() + r.cls.replace('val-', '').slice(1)}</span></td>
+                    </tr>
+                `).join('');
+                modal.classList.add('show');
+            };
+
+            const closeModal = () => modal.classList.remove('show');
+            closeBtn.addEventListener('click', closeModal);
+            closeBtnFooter.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+            document.querySelectorAll('.btn-view-full').forEach((btn, index) => {
+                btn.addEventListener('click', () => openModal(index));
+            });
+
+            // Download PDF button
+            document.querySelector('.btn-modal-download').addEventListener('click', () => {
+                alert('PDF download started...');
+            });
+        });
+    </script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>

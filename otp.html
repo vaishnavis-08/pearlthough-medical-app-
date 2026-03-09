@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="auth-page">
+    <div class="auth-container">
+        <a href="index.html" class="back-link">
+            <i data-lucide="arrow-left" style="width: 18px;"></i>
+            Back to Home
+        </a>
+
+        <div class="auth-branding">
+            <div class="logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+        </div>
+
+        <div class="auth-header">
+            <h2>OTP Code Verification</h2>
+            <p>Code has been sent to your registered mobile number</p>
+        </div>
+
+        <div class="otp-inputs">
+            <input type="text" maxlength="1" class="otp-box" autofocus>
+            <input type="text" maxlength="1" class="otp-box">
+            <input type="text" maxlength="1" class="otp-box">
+            <input type="text" maxlength="1" class="otp-box">
+            <input type="text" maxlength="1" class="otp-box">
+            <input type="text" maxlength="1" class="otp-box">
+        </div>
+
+        <button id="verify-otp-btn" class="btn btn-primary btn-block">Verify OTP</button>
+
+        <div class="resend-container">
+            Resend code in <span id="timer">60</span> seconds
+            <br><br>
+            <button id="resend-btn" class="resend-btn">Resend OTP</button>
+        </div>
+    </div>
+
+    <!-- Success Overlay -->
+    <div id="success-screen" class="success-overlay">
+        <div class="success-icon">
+            <i data-lucide="check" style="width: 40px; height: 40px;"></i>
+        </div>
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--text-main);">Verification Successful</h2>
+        <p style="color: var(--text-muted);">Your account has been verified successfully.</p>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/auth.js"></script>
+</body>
+
+</html>

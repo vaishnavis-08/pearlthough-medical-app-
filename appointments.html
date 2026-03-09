@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item active">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="appointments-container">
+                <!-- Page Header -->
+                <div class="page-header-alt">
+                    <div class="header-left-alt">
+                        <div class="page-title-group">
+                            <h1>Appointments</h1>
+                            <p>Manage your bookings</p>
+                        </div>
+                    </div>
+                    <div class="header-right-alt">
+                        <select class="sort-select">
+                            <option>Sort by Date</option>
+                            <option>Sort by Doctor</option>
+                            <option>Sort by Status</option>
+                        </select>
+                        <button class="btn-new-booking">
+                            <i data-lucide="calendar"></i>
+                            New Booking
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Status Tabs -->
+                <nav class="status-tabs-nav">
+                    <div class="status-tab active">Upcoming <span>3</span></div>
+                    <div class="status-tab">Completed <span>2</span></div>
+                    <div class="status-tab">Canceled <span>1</span></div>
+                </nav>
+
+                <!-- Appointment List -->
+                <section class="appointment-list-vertical">
+                    <!-- Appointment 1 -->
+                    <div class="appointment-card-v">
+                        <div class="apt-card-left">
+                            <div class="dr-avatar-init">P</div>
+                            <div class="dr-info-content">
+                                <h3>Dr. Prakash Das <span class="badge-status-conf">CONFIRMED</span></h3>
+                                <p class="dr-specialty">Sr. Psychologist</p>
+                                <p class="dr-qualif">MBBS, MD (Psychiatry)</p>
+                                <div class="apt-meta-info">
+                                    <span class="apt-id-text">ID: APT-2025-001</span>
+                                    <span class="badge-pay-status pending">Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apt-card-right">
+                            <div class="apt-datetime-display">
+                                <i data-lucide="calendar"></i>
+                                <div class="apt-date-text">
+                                    <span>2025-02-15</span>
+                                    <small>10:00 AM</small>
+                                </div>
+                            </div>
+                            <div class="apt-actions-row">
+                                <button class="btn-apt-action btn-pay-now">Pay Now</button>
+                                <button class="btn-apt-action btn-outline-resch">Reschedule</button>
+                                <button class="btn-apt-action btn-outline-canc">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appointment 2 -->
+                    <div class="appointment-card-v">
+                        <div class="apt-card-left">
+                            <div class="dr-avatar-init">J</div>
+                            <div class="dr-info-content">
+                                <h3>Dr. John Reddy <span class="badge-status-conf">CONFIRMED</span></h3>
+                                <p class="dr-specialty">Cardiologist</p>
+                                <p class="dr-qualif">MBBS, MD (Cardiology)</p>
+                                <div class="apt-meta-info">
+                                    <span class="apt-id-text">ID: APT-2025-002</span>
+                                    <span class="badge-pay-status paid">Paid</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apt-card-right">
+                            <div class="apt-datetime-display">
+                                <i data-lucide="calendar"></i>
+                                <div class="apt-date-text">
+                                    <span>2025-02-18</span>
+                                    <small>10:30 AM</small>
+                                </div>
+                            </div>
+                            <div class="apt-actions-row">
+                                <button class="btn-apt-action btn-outline-done-v">Done</button>
+                                <button class="btn-apt-action btn-outline-resch">Reschedule</button>
+                                <button class="btn-apt-action btn-outline-canc">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appointment 3 -->
+                    <div class="appointment-card-v">
+                        <div class="apt-card-left">
+                            <div class="dr-avatar-init">V</div>
+                            <div class="dr-info-content">
+                                <h3>Dr. Vaishnavi <span class="badge-status-conf">CONFIRMED</span></h3>
+                                <p class="dr-specialty">Dermatologist</p>
+                                <p class="dr-qualif">MBBS, MD (Dermatology)</p>
+                                <div class="apt-meta-info">
+                                    <span class="apt-id-text">ID: APT-2025-003</span>
+                                    <span class="badge-pay-status pending">Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apt-card-right">
+                            <div class="apt-datetime-display">
+                                <i data-lucide="calendar"></i>
+                                <div class="apt-date-text">
+                                    <span>2025-02-20</span>
+                                    <small>02:30 PM</small>
+                                </div>
+                            </div>
+                            <div class="apt-actions-row">
+                                <button class="btn-apt-action btn-pay-now">Pay Now</button>
+                                <button class="btn-apt-action btn-outline-resch">Reschedule</button>
+                                <button class="btn-apt-action btn-outline-canc">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/book.js"></script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>

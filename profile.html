@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item active">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="profile-container">
+                <!-- Page Header -->
+                <header class="page-header-alt">
+                    <div class="header-left-alt">
+                        <div class="page-title-group">
+                            <h1>My Profile</h1>
+                            <p>Manage your personal information and settings</p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Profile Summary Card -->
+                <section class="profile-summary-card">
+                    <div class="profile-avatar-large">U</div>
+                    <div class="profile-info">
+                        <h1>User</h1>
+                        <div class="contact-meta">
+                            <i data-lucide="mail" style="width: 16px;"></i> demo@gmail.com
+                            <span style="opacity: 0.5;">•</span>
+                            <i data-lucide="phone" style="width: 16px;"></i> +91 12345 67899
+                        </div>
+                        <div class="badge-row">
+                            <div class="info-pill pill-purple">
+                                <i data-lucide="calendar" style="width: 14px;"></i>
+                                1995-06-14
+                            </div>
+                            <div class="info-pill pill-blue">
+                                <i data-lucide="user" style="width: 14px;"></i>
+                                Male
+                            </div>
+                            <div class="info-pill pill-red">
+                                <i data-lucide="droplet" style="width: 14px;"></i>
+                                O+ Blood
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="profile-details-grid">
+                    <div class="profile-card-v emergency-card">
+                        <h2><i data-lucide="alert-circle" style="color: #EF4444;"></i> Emergency Contact</h2>
+                        <div class="emergency-content">
+                            <div class="contact-details">
+                                <p>Rina Das</p>
+                                <span>Mother</span>
+                                <div style="margin-top: 0.5rem; font-weight: 700; color: #EF4444;">
+                                    +91 91234 56789
+                                </div>
+                            </div>
+                            <button class="btn-call-circle">
+                                <i data-lucide="phone"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="profile-card-v">
+                        <h2><i data-lucide="map-pin" style="color: var(--primary);"></i> Primary Address</h2>
+                        <div class="address-text">
+                            42, Lake Town, Kolkata,<br>
+                            West Bengal – 700089
+                        </div>
+                        <div class="address-footer">
+                            Virar, Mumbai
+                        </div>
+                    </div>
+
+                    <div class="profile-card-v alerts-card">
+                        <h2><i data-lucide="shield-check" style="color: var(--primary);"></i> Medical Alerts &
+                            Conditions</h2>
+                        <div class="alerts-split">
+                            <div class="alert-group">
+                                <h3>Known Allergies</h3>
+                                <div class="tag-cloud">
+                                    <span class="tag-allergy">Penicillin</span>
+                                    <span class="tag-allergy">Dust</span>
+                                </div>
+                            </div>
+                            <div class="alert-group">
+                                <h3>Chronic Conditions</h3>
+                                <div class="tag-cloud">
+                                    <span class="tag-condition">Mild Hypertension</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Doctors | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item active">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="find-doctor-container">
+                <!-- Hero Section -->
+                <section class="hero-banner">
+                    <div class="hero-content">
+                        <h1>Find & Book<br>Top Doctors</h1>
+                        <p>Get expert medical care from verified professionals. Book your appointment in minutes.</p>
+                        <div class="stats-badges">
+                            <div class="stat-badge">
+                                <i data-lucide="users"></i>
+                                <span>200+ Available Doctors</span>
+                            </div>
+                            <div class="stat-badge">
+                                <i data-lucide="calendar-check"></i>
+                                <span>Next Slots: Today</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-illustration">
+                        <i data-lucide="heart"
+                            style="width: 100px; height: 100px; color: var(--white); fill: rgba(255,255,255,0.2);"></i>
+                    </div>
+                </section>
+
+                <!-- Filters Section -->
+                <section class="specialization-filters"
+                    style="display: flex; gap: 1rem; margin-bottom: 2.5rem; overflow-x: auto; padding-bottom: 0.5rem;">
+                    <button class="filter-pill active">All</button>
+                    <button class="filter-pill">Sr. Psychologist</button>
+                    <button class="filter-pill">Cardiologist</button>
+                    <button class="filter-pill">Orthopedic</button>
+                    <button class="filter-pill">Dermatologist</button>
+                    <button class="filter-pill">Neurologist</button>
+                    <button class="filter-pill">Pediatrician</button>
+                    <button class="filter-pill">Gynecologist</button>
+                    <button class="filter-pill">Ophthalmologist</button>
+                    <button class="filter-pill">Dentist</button>
+                    <button class="filter-pill">ENT Specialist</button>
+                </section>
+
+                <!-- Results Header -->
+                <div class="results-header">
+                    <div class="results-info">
+                        <h2>Recommended Doctors</h2>
+                        <span>10 doctors found</span>
+                    </div>
+                    <div class="layout-toggle">
+                        <div class="toggle-btn active"><i data-lucide="grid"></i></div>
+                        <div class="toggle-btn"><i data-lucide="list"></i></div>
+                    </div>
+                </div>
+
+                <!-- Doctor Grid -->
+                <div class="doctor-grid">
+                    <!-- Dr. Prakash Das -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_prakash_1772906642585.png" class="doctor-image" alt="Dr. Prakash Das">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.9 (120 reviews)</span>
+                            </div>
+                            <h3>Dr. Prakash Das</h3>
+                            <p class="specialization">Sr. Psychologist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>12 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MD</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹800</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. John Reddy -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_john_1772906660817.png" class="doctor-image" alt="Dr. John Reddy">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.8 (95 reviews)</span>
+                            </div>
+                            <h3>Dr. John Reddy</h3>
+                            <p class="specialization">Cardiologist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>15 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MD</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹1200</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. Sai Sarvesh R -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_sai_1772906683050.png" class="doctor-image" alt="Dr. Sai Sarvesh R">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-offline"><span class="status-dot"></span>Offline</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.7 (80 reviews)</span>
+                            </div>
+                            <h3>Dr. Sai Sarvesh R</h3>
+                            <p class="specialization">Orthopedic</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>10 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MS</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹1000</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. Vaishnavi -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_vaishnavi_1772906703484.png" class="doctor-image" alt="Dr. Vaishnavi">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.9 (150 reviews)</span>
+                            </div>
+                            <h3>Dr. Vaishnavi</h3>
+                            <p class="specialization">Dermatologist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>8 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MD</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹900</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. Sarah Chen -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_sarah_chen_1773029332189.png" class="doctor-image" alt="Dr. Sarah Chen">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.8 (110 reviews)</span>
+                            </div>
+                            <h3>Dr. Sarah Chen</h3>
+                            <p class="specialization">Neurologist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>14 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MD</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹1500</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. Michael Brown -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_michael_brown_1773029348245.png" class="doctor-image"
+                                alt="Dr. Michael Brown">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.7 (135 reviews)</span>
+                            </div>
+                            <h3>Dr. Michael Brown</h3>
+                            <p class="specialization">Pediatrician</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>9 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, DCH</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹700</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. Elena Rodriguez -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_elena_rodriguez_1773029373626.png" class="doctor-image"
+                                alt="Dr. Elena Rodriguez">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.9 (180 reviews)</span>
+                            </div>
+                            <h3>Dr. Elena Rodriguez</h3>
+                            <p class="specialization">Gynecologist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>11 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MS</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹1100</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. David Wilson -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_david_wilson_1773029391233.png" class="doctor-image"
+                                alt="Dr. David Wilson">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.6 (90 reviews)</span>
+                            </div>
+                            <h3>Dr. David Wilson</h3>
+                            <p class="specialization">Ophthalmologist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>16 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MS</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹1000</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. Aisha Khan -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_aisha_khan_1773029407447.png" class="doctor-image" alt="Dr. Aisha Khan">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.8 (115 reviews)</span>
+                            </div>
+                            <h3>Dr. Aisha Khan</h3>
+                            <p class="specialization">Dentist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>7 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>BDS, MDS</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹600</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dr. James Smith -->
+                    <div class="doctor-card">
+                        <div class="doctor-card-top">
+                            <img src="doctor_james_smith_1773029422875.png" class="doctor-image" alt="Dr. James Smith">
+                            <button class="favorite-btn"><i data-lucide="heart"></i></button>
+                            <span class="status-badge status-available"><span class="status-dot"></span>Available</span>
+                        </div>
+                        <div class="doctor-card-body">
+                            <div class="rating-row">
+                                <i data-lucide="star"></i>
+                                <span>4.7 (105 reviews)</span>
+                            </div>
+                            <h3>Dr. James Smith</h3>
+                            <p class="specialization">ENT Specialist</p>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>13 Yrs Exp</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i data-lucide="graduation-cap"></i>
+                                    <span>MBBS, MS</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card-footer">
+                                <div class="fee-info">
+                                    <label>Fee</label>
+                                    <span>₹950</span>
+                                </div>
+                                <button class="book-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/book.js"></script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>

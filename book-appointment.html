@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="booking-section">
+                <!-- Large Profile Hero -->
+                <div class="doctor-profile-hero">
+                    <div class="profile-hero-img">
+                        <img src="doctor_john_1772906660817.png" class="doctor-image" alt="Doctor Image">
+                    </div>
+                    <div class="profile-hero-content">
+                        <h3>Dr. John Reddy</h3>
+                        <p class="specialization">Cardiologist</p>
+
+                        <div class="profile-hero-stats">
+                            <div class="p-stat">
+                                <label>Experience</label>
+                                <span id="doc-exp">15 Yrs EXP</span>
+                            </div>
+                            <div class="p-stat">
+                                <label>Rating</label>
+                                <span id="doc-rating">4.8 (95 reviews)</span>
+                            </div>
+                            <div class="p-stat">
+                                <label>Consultation Fee</label>
+                                <span id="doc-fee">₹1200</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2.5rem; display: flex; gap: 1rem;">
+                            <button class="btn btn-primary hero-book-now" id="hero-book-now-btn"
+                                style="padding: 1rem 2.5rem; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(124, 58, 237, 0.25);">Book
+                                Appointment Now</button>
+                            <button class="btn btn-secondary" id="hero-view-profile-btn"
+                                style="padding: 1rem 2rem; border: 1.5px solid var(--primary); background: transparent; color: var(--primary); font-weight: 700;">View
+                                Full Profile</button>
+                        </div>
+
+                        <!-- Doctor Description Box (Toggled) -->
+                        <div id="doctor-bio-box"
+                            style="display: none; margin-top: 2rem; padding: 2rem; background: #F9FAFB; border-radius: 1.5rem; border: 1px solid #F1F5F9; animation: fadeInDown 0.4s ease-out;">
+                            <h4 style="margin-bottom: 0.75rem; color: var(--text-main); font-size: 1.1rem;">Professional
+                                Biography</h4>
+                            <p id="doc-bio-text"
+                                style="line-height: 1.7; color: var(--text-muted); font-size: 0.95rem;">
+                                Loading doctor biography...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="date-picker-container">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">
+                        Select Date</h2>
+                    <div class="date-scroll">
+                        <div class="date-item active">
+                            <span>Mon</span>
+                            <span>09</span>
+                        </div>
+                        <div class="date-item">
+                            <span>Tue</span>
+                            <span>10</span>
+                        </div>
+                        <div class="date-item">
+                            <span>Wed</span>
+                            <span>11</span>
+                        </div>
+                        <div class="date-item">
+                            <span>Thu</span>
+                            <span>12</span>
+                        </div>
+                        <div class="date-item">
+                            <span>Fri</span>
+                            <span>13</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-slots-container">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">
+                        Select Time</h2>
+                    <div class="time-grid">
+                        <div class="time-slot active">10:00 AM</div>
+                        <div class="time-slot">10:30 AM</div>
+                        <div class="time-slot">11:00 AM</div>
+                        <div class="time-slot">11:30 AM</div>
+                        <div class="time-slot disabled"
+                            style="opacity: 0.5; cursor: not-allowed; background: var(--bg-main);">12:00 PM</div>
+                        <div class="time-slot">02:00 PM</div>
+                        <div class="time-slot">02:30 PM</div>
+                        <div class="time-slot">03:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-action-bar">
+                <div class="selected-info">
+                    <label>Selected Slot</label>
+                    <span>Mon, Mar 09 • 10:00 AM</span>
+                </div>
+                <a href="booking-success.html" class="btn btn-primary"
+                    style="text-decoration: none; display: inline-flex; padding: 1rem 2.5rem; font-size: 1.1rem;">Confirm
+                    Booking & Book Now</a>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/book.js"></script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>

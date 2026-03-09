@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Success | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="confirmation-container"
+                style="display: flex; justify-content: center; align-items: center; padding: 5rem 2rem; position: relative; z-index: 10;">
+                <div class="success-card-premium"
+                    style="background: white; border-radius: 2.5rem; padding: 4rem; text-align: center; max-width: 600px; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1); border: 1px solid rgba(124, 58, 237, 0.05); position: relative; z-index: 20;">
+                    <div class="success-icon-container"
+                        style="width: 100px; height: 100px; background: #F5F3FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; color: var(--primary); font-size: 3rem;">
+                        <i data-lucide="check-circle-2" style="width: 60px; height: 60px;"></i>
+                    </div>
+
+                    <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                        Booking Confirmed!</h1>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; font-weight: 600;">Your
+                        appointment has been successfully scheduled. We've sent a confirmation email to you.</p>
+
+                    <div class="booking-summary-premium"
+                        style="background: #F9FAFB; border-radius: 2rem; padding: 2.5rem; margin-bottom: 3rem; text-align: left; border: 1.5px dashed var(--primary); position: relative; z-index: 21;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <div class="dr-img-success"
+                                style="width: 80px; height: 80px; border-radius: 1.25rem; overflow: hidden; box-shadow: var(--shadow-md);">
+                                <img src="doctor_prakash_1772906642585.png" alt="Doctor"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h3 id="success-doc-name"
+                                    style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">Dr. Sarah
+                                    Smith</h3>
+                                <p id="success-doc-spec"
+                                    style="color: var(--primary); font-weight: 700; font-size: 0.95rem;">General
+                                    Physician</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                            <div class="summary-item">
+                                <label
+                                    style="display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Date</label>
+                                <span id="success-date"
+                                    style="font-weight: 800; color: var(--text-main); font-size: 1.1rem;">Mon, Mar
+                                    10</span>
+                            </div>
+                            <div class="summary-item">
+                                <label
+                                    style="display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Time</label>
+                                <span id="success-time"
+                                    style="font-weight: 800; color: var(--text-main); font-size: 1.1rem;">10:30
+                                    AM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="appointments.html" class="btn btn-primary"
+                            style="padding: 1.25rem; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(124, 58, 237, 0.2);">View
+                            Appointments</a>
+                        <a href="dashboard.html" class="btn btn-secondary"
+                            style="padding: 1.25rem; font-weight: 700; border: 1.5px solid var(--primary); background: transparent;">Go
+                            to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/book.js"></script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>

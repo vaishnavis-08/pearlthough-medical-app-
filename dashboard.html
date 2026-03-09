@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Schedula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="activity"></i>
+                <span>Schedula</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="find-doctor.html" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Find Doctors</span>
+                </a>
+                <a href="appointments.html" class="nav-item">
+                    <i data-lucide="calendar"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="medical-records.html" class="nav-item">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Medical Records</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>My Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-preview">
+                    <div class="user-avatar-small">U</div>
+                    <div class="user-details-small">
+                        <span class="u-name">User</span>
+                        <span class="u-role">Patient</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-actions" style="margin-left: auto;">
+                    <div class="icon-btn">
+                        <i data-lucide="bell" style="width: 20px;"></i>
+                    </div>
+                    <a href="profile.html" class="icon-btn profile-icon" style="text-decoration: none; color: inherit;">
+                        <i data-lucide="user" style="width: 20px;"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="dashboard-content-container" style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+                <h1 style="font-size: 2.25rem; margin-bottom: 2rem; color: var(--text-main);">Welcome back, Sarah! 👋
+                </h1>
+
+                <div class="dashboard-grid">
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <span class="dash-card-title">Upcoming Appointments</span>
+                            <a href="appointments.html"
+                                style="color: var(--primary); font-size: 0.85rem; font-weight: 700;">View All</a>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon"
+                                    style="background: rgba(124, 58, 237, 0.1); color: var(--primary);">
+                                    <i data-lucide="calendar" style="width: 16px;"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <div style="font-weight: 700; font-size: 0.95rem;">Dr. Sarah Smith</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Consultation • Oct 26,
+                                        10:00 AM</div>
+                                </div>
+                                <div class="activity-time">Tomorrow</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <span class="dash-card-title">Recent Activity</span>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">
+                                    <i data-lucide="file-text" style="width: 16px;"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <div style="font-weight: 700; font-size: 0.95rem;">Lab Results Ready</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Blood Test Report uploaded
+                                    </div>
+                                </div>
+                                <div class="activity-time">2h ago</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: rgba(59, 130, 246, 0.1); color: #3B82F6;">
+                                    <i data-lucide="pill" style="width: 16px;"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <div style="font-weight: 700; font-size: 0.95rem;">New Prescription</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Dr. Chen added Amoxicillin
+                                    </div>
+                                </div>
+                                <div class="activity-time">Yesterday</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="font-size: 1.5rem; margin: 2.5rem 0 1.5rem; color: var(--text-main);">Quick Actions</h2>
+                <div class="quick-actions-grid">
+                    <a href="find-doctor.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <div class="action-icon">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <div class="action-label">Book Appointment</div>
+                    </a>
+                    <a href="find-doctor.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <div class="action-icon">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <div class="action-label">Find Doctor</div>
+                    </a>
+                    <a href="medical-records.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <div class="action-icon">
+                            <i data-lucide="clipboard-list"></i>
+                        </div>
+                        <div class="action-label">View Medical Records</div>
+                    </a>
+                    <a href="profile.html" class="action-card" style="text-decoration: none; color: inherit;">
+                        <div class="action-icon">
+                            <i data-lucide="settings"></i>
+                        </div>
+                        <div class="action-label">Settings</div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script src="/topbar.js"></script>
+</body>
+
+</html>
